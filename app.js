@@ -8,8 +8,8 @@ client.on('ready', () => {
 
 
 client.on('message', msg => {
-    if ( msg.content === "ping" ){
-        msg.reply("pong");
+    if ( msg.content.match(".cp77.when.")){
+        msg.channel.send("neva")
     }
 });
 
