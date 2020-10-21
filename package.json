@@ -1,0 +1,29 @@
+{
+  "name": "cp77-timer",
+  "version": "1.0.0",
+  "description": "Discord bot that counts down for CP77",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Archerist/cp77-timer.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "cyberpunk",
+    "2077",
+    "cp77"
+  ],
+  "author": "Archerist",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Archerist/cp77-timer/issues"
+  },
+  "homepage": "https://github.com/Archerist/cp77-timer#readme",
+  "dependencies": {
+    "discord.js": "^12.4.0"
+  }
+}
