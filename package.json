@@ -26,5 +26,6 @@
   "homepage": "https://github.com/Archerist/cp77-timer#readme",
   "dependencies": {
     "discord.js": "^12.4.0"
-  }
+  },
+  "type": "module"
 }
