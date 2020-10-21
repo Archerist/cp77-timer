@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 
 client.on('message', msg => {
-    if ( msg.content.match(".cp77.when.")){
+    if ( msg.content.match(/.cp77.when./g) ){
         msg.channel.send("neva")
     }
 });
