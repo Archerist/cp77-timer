@@ -2,7 +2,7 @@ import * as DC from 'discord.js';
 
 const client = new DC.Client();
 
-const countdown_day = new Date(present_date.getFullYear(), 8, 17) 
+const countdown_day = new Date(present_date.getFullYear(), 11, 19) 
 const one_day = 1000 * 60 * 60 * 24 
 
 client.on('ready', () => {
