@@ -17,11 +17,11 @@ client.on('message', msg => {
 
         
   
-        let status;
+        let status = '';
             
         if(result > 0) {
         
-            status += 'There are ' + result +  ' days left until the release of #Cyberpunk2077 #CP2077 #2077';
+            status += 'There are ' + result +  ' days left until the release of CP77';
         }
         else
         {
