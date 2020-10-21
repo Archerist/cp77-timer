@@ -13,7 +13,7 @@ client.on('ready', () => {
 client.on('message', msg => {
     if ( msg.content.match(/.*(cp77|cyberpunk(|77)).*when.*/gi) ){
         let present = new Date();
-        let result = (Math.round(countdown_day.getTime() - present_date.getTime()) / (one_day)).toFixed(0);
+        let result = (Math.round(countdown_day.getTime() - present.getTime()) / (one_day)).toFixed(0);
 
         
   
@@ -21,15 +21,13 @@ client.on('message', msg => {
             
         if(Final_Result > 0) {
         
-            status += 'There are ' + Final_Result +  ' days left until the release of #Cyberpunk2077 #CP2077 #2077';
+            status += 'There are ' + result +  ' days left until the release of #Cyberpunk2077 #CP2077 #2077';
         }
         else
         {
             //Final status
             status += 'Wake up samurai. #Cyberpunk2077 releases today!';
         }
-        
-        return status;
         
         msg.reply(status);        
 
