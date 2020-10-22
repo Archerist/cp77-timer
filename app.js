@@ -19,9 +19,12 @@ client.on('message', msg => {
 
         console.log(diff);
         console.log(present);
-        
-  
-        
+
+        if(countdown_day.format('x') - present.format('x') >0 ){
+            msg.channel.send(`${moment.preciseDiff(countdown_day,present)} until CP77`)
+        } else {
+            msg.channel.send(`Wake the fuck up ${msg.member}`)
+        }
 
 
     }
