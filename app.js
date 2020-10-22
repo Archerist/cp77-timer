@@ -5,7 +5,7 @@ import 'moment-timezone';
 
 const client = new DC.Client();
 
-const countdown_day = moment('2020-19-11 00:00:00', 'YYYY-DD-MM HH:mm:ss').tz('UTC-05:00')
+const countdown_day = moment('2020-19-11 00:00:00', 'YYYY-DD-MM HH:mm:ss').tz('CEST')
 const one_day = 1000 * 60 * 60 * 24 
 
 client.on('ready', () => {
