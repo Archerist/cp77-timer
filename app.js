@@ -15,7 +15,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     if ( msg.content.match(/.*(cp77|cyberpunk(|77)).*when.*/gi) ){
-        let present = moment();
+        let present = moment().tz('Europe/Warsaw').tz('Europe/Warsaw');
         let diff = moment.preciseDiff(countdown_day,present)
 
         console.log(diff);
