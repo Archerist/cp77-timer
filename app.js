@@ -2,8 +2,10 @@ const DC = require('discord.js')
 const {DateTime, Duration, Settings} = require('luxon')
 const client = new DC.Client();
 
-const countdown_day = DateTime.fromObject({year:2020, month: 11, day: 19});
 Settings.defaultZoneName = "Europe/Warsaw"
+
+const countdown_day = DateTime.fromObject({year:2020, month: 11, day: 19});
+
 
 
 client.on('ready', () => {
@@ -12,7 +14,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
     
-    if ( msg.content.match(/.*(cp(|20)77|cyberpunk(|(|20)77)).*when.*/gi) ){
+    if ( msg.content.match(/.*(cp(| )(|20)77|cyberpunk(|(|20)77)).*when.*/gi) ){
 
         let diff = countdown_day.diffNow(['days', 'hours', 'minutes', 'seconds'])
         let message;
