@@ -13,23 +13,42 @@ client.on('ready', () => {
 });
 
 
+// client.on('message', msg => {
+//     if ( msg.content.match(/.*(cp(|20)77|cyberpunk(|(|20)77)).*when.*/gi) ){
+//         let present = moment().tz('Europe/Warsaw');
+//         let diff = moment.preciseDiff(countdown_day,present);
+
+//         
+
+
+//     }
+// });
+
 client.on('message', msg => {
+
+    
+    
     if ( msg.content.match(/.*(cp(|20)77|cyberpunk(|(|20)77)).*when.*/gi) ){
+
         let present = moment().tz('Europe/Warsaw');
         let diff = moment.preciseDiff(countdown_day,present)
-
-        console.log(diff);
-        console.log(present);
-
+        let message;
         if(countdown_day.format('x') - present.format('x') >0 ){
-            msg.channel.send(`${moment.preciseDiff(countdown_day,present)} until CP77`)
+            message = `${diff}`;
         } else {
-            msg.channel.send(`Wake the fuck up ${msg.member}`)
+            message = "Wake the fuck up samurai";
         }
 
+        let embed = new DC.MessageEmbed()
+        .setColor('#FFFF00')
+        .setTitle('Time until CP77 Release')
+        .addField(`${message}`, `2020-19-11 00:00:00 CEST (Europe/Warsaw)`)
+        .setThumbnail('https://cdn.discordapp.com/avatars/768565170297372726/c8b4c005134e3c9badccdb48c425f43b.png')
+        .setFooter('Github:Archerist/CP77-Timer | MIT License');
 
+        msg.channel.send(embed);
     }
-});
+})
 
 client.login(process.env.TOKEN);
 
