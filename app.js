@@ -1,10 +1,10 @@
-import * as DC from 'discord.js';
-import 'moment';
-import 'moment-precise-range-plugin';
-import moment2 from 'moment-timezone';
+const DC = require('discord.js')
+const {DateTime, Duration, Settings} = require('luxon')
 const client = new DC.Client();
 
-const countdown_day = moment2('2020-19-11 00:00:00', 'YYYY-DD-MM HH:mm:ss').tz('Europe/Warsaw')
+const countdown_day = DateTime.fromObject({year:2020, month: 11, day: 19});
+Settings.defaultZoneName = "Europe/Warsaw"
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
@@ -14,11 +14,10 @@ client.on('message', msg => {
     
     if ( msg.content.match(/.*(cp(|20)77|cyberpunk(|(|20)77)).*when.*/gi) ){
 
-        let present = moment2().tz('Europe/Warsaw');
-        let diff = moment2.preciseDiff(countdown_day,present)
+        let diff = countdown_day.diffNow(['days', 'hours', 'minutes', 'seconds'])
         let message;
-        if(countdown_day.format('x') - present.format('x') >0 ){
-            message = `${diff}`;
+        if( diff.as('seconds') > 0 ){
+            message = `${diff.days} days, ${diff.hours} hours, ${diff.minutes} minutes and ${Math.floor(diff.seconds)} seconds`;
         } else {
             message = "Wake the fuck up samurai";
         }
