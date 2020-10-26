@@ -1,25 +1,21 @@
 import * as DC from 'discord.js';
 import 'moment';
 import 'moment-precise-range-plugin';
-import moment from 'moment-timezone';
-
+import moment2 from 'moment-timezone';
 const client = new DC.Client();
 
-const countdown_day = moment('2020-19-11 00:00:00', 'YYYY-DD-MM HH:mm:ss').tz('Europe/Warsaw')
-const one_day = 1000 * 60 * 60 * 24 
+const countdown_day = moment2('2020-19-11 00:00:00', 'YYYY-DD-MM HH:mm:ss').tz('Europe/Warsaw')
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
 client.on('message', msg => {
-
-    
     
     if ( msg.content.match(/.*(cp(|20)77|cyberpunk(|(|20)77)).*when.*/gi) ){
 
-        let present = moment().tz('Europe/Warsaw');
-        let diff = moment.preciseDiff(countdown_day,present)
+        let present = moment2().tz('Europe/Warsaw');
+        let diff = moment2.preciseDiff(countdown_day,present)
         let message;
         if(countdown_day.format('x') - present.format('x') >0 ){
             message = `${diff}`;
