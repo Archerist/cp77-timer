@@ -4,7 +4,7 @@ const client = new DC.Client();
 
 Settings.defaultZoneName = "Europe/Warsaw"
 
-const countdown_day = DateTime.fromObject({year:2020, month: 11, day: 19});
+const countdown_day = DateTime.fromObject({year:2020, month: 12, day: 10});
 
 
 
@@ -38,4 +38,5 @@ client.on('message', msg => {
 client.login(process.env.TOKEN);
 
 //19TH NOVEMBER 2020 AT 12:00AM
-
+//LMAO IT GOT DELAYED
+//10TH DEC 2020
