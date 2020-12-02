@@ -4,7 +4,7 @@ const client = new DC.Client();
 
 Settings.defaultZoneName = "Europe/Warsaw"
 
-const countdown_day = DateTime.fromObject({year:2020, month: 12, day: 10});
+const countdown_day = DateTime.fromObject({year:2020, month: 12, day: 10, hour:1});
 
 
 
@@ -27,7 +27,7 @@ client.on('message', msg => {
         let embed = new DC.MessageEmbed()
         .setColor('#FFFF00')
         .setTitle('Time until CP77 Release')
-        .addField(`${message}`, `2020-12-10 00:00:00 CEST (Europe/Warsaw)`)
+        .addField(`${message}`, `2020-12-10 01:00:00 CEST (Europe/Warsaw)`)
         .setThumbnail('https://cdn.discordapp.com/avatars/768565170297372726/c8b4c005134e3c9badccdb48c425f43b.png')
         .setFooter('Github:Archerist/CP77-Timer | MIT License');
 
