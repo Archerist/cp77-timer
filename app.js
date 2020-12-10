@@ -29,7 +29,7 @@ client.on('message', msg => {
         .setTitle('Time until CP77 Release')
         //.addField(`${message}`, `2020-12-10 01:00:00 CEST (Europe/Warsaw)`)
         .addField(`My time has come`, `2020-12-10 01:00:00 CEST (Europe/Warsaw)`)
-        .addField('https://youtu.be/fqg0y8cTn1U', '')
+        .addField('https://youtu.be/fqg0y8cTn1U', ' ')
         .setThumbnail('https://en.meming.world/images/en/thumb/a/a1/My_Time_Has_Come.jpg/300px-My_Time_Has_Come.jpg')
         .setFooter('Github:Archerist/CP77-Timer | MIT License');
 
