@@ -27,10 +27,9 @@ client.on('message', msg => {
         let embed = new DC.MessageEmbed()
         .setColor('#FFFF00')
         .setTitle('Time until CP77 Release')
-        //.addField(`${message}`, `2020-12-10 01:00:00 CEST (Europe/Warsaw)`)
-        .addField(`My time has come`, `2020-12-10 01:00:00 CEST (Europe/Warsaw)`)
-        .addField('\u200b', 'https://youtu.be/fqg0y8cTn1U')
-        .setThumbnail('https://en.meming.world/images/en/thumb/a/a1/My_Time_Has_Come.jpg/300px-My_Time_Has_Come.jpg')
+        .addField(`${message}`, `2020-12-10 01:00:00 CEST (Europe/Warsaw)`)
+        .addField('`itsgonnagetdelayedagainin321...`')
+        .setThumbnail('https://cdn.discordapp.com/avatars/768565170297372726/c8b4c005134e3c9badccdb48c425f43b.png')
         .setFooter('Github:Archerist/CP77-Timer | MIT License');
 
         msg.channel.send(embed);
